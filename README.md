@@ -28,7 +28,7 @@ A simple candidate tracker web app with frontend (React / Vite) and backend (Nod
 1. Clone repository:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/rapsign/Bekerdja-Technical-Assessment.git
 cd bekerdja-technical-assessment
 ```
 
