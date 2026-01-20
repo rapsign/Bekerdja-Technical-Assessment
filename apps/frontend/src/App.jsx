@@ -15,7 +15,15 @@ function App() {
 
   useEffect(() => {
     getCandidates()
-      .then(setData)
+      .then((candidates) =>
+        setData(
+          candidates.sort(
+            (a, b) =>
+              new Date(b.created_at).getTime() -
+              new Date(a.created_at).getTime(),
+          ),
+        ),
+      )
       .finally(() => setLoading(false));
   }, []);
 

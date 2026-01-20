@@ -38,12 +38,6 @@ cd bekerdja-technical-assessment
 pnpm install
 ```
 
-3. Create `.env` for backend (if needed):
-
-```
-PORT=5000
-```
-
 ---
 
 ## Development
@@ -71,19 +65,9 @@ Backend runs at: [http://localhost:5000](http://localhost:5000)
 - Terminal 1: `pnpm --filter ./apps/frontend run dev`
 - Terminal 2: `pnpm --filter ./apps/backend run dev`
 
-**Option 2: Single terminal (Windows)**
+**Option 2: Single terminal**
 
-Add this to root `package.json`:
-
-```json
-"scripts": {
-  "start:web": "pnpm --filter ./apps/frontend run dev",
-  "start:api": "pnpm --filter ./apps/backend run dev",
-  "dev": "start cmd /k \"pnpm run start:web\" & start cmd /k \"pnpm run start:api\""
-}
-```
-
-Then run:
+run:
 
 ```bash
 pnpm run dev
@@ -91,6 +75,7 @@ pnpm run dev
 
 ## Backend Notes
 
+- server must be running
 - `data.json` is used as a simple database.
 - operations (read/add/update/delete) persist **only while server is running**.
 
