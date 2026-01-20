@@ -1,0 +1,17 @@
+{
+  "name": "bekerdja-technical-assessment",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start:web": "pnpm --filter ./apps/frontend run dev",
+    "start:api": "pnpm --filter ./apps/backend run dev",
+    "dev": "concurrently \"pnpm run start:web\" \"pnpm run start:api\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
